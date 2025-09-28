@@ -1,6 +1,7 @@
 #include "logic.h"
 #include <stdio.h>
 
+
 int checkWinSquare(short **grid, short n, short square[2], short botPlayer){
     /* 
        grid   : the board
@@ -61,6 +62,7 @@ int checkWinSquare(short **grid, short n, short square[2], short botPlayer){
 }
 
 void bestMove(short **grid, short n, int* squareMax){
+    /*selects the best move in the grid's current state*/
     int score = -1;
     short square[2] = {0, 0};
     int scoreNow = 0;
