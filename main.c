@@ -1,4 +1,5 @@
 #include "interface.c"
+#include <stdio.h>
 
 
 int main(){
@@ -24,8 +25,17 @@ int main(){
     debug[2][2] = -1;
 
     printCLI(debug, 3);
-
-    gameAiP();
+    printf("[P]layer vs Player\n[A]i vs Player\n");
+    char choice;
+    scanf("%c", &choice);
+    switch (choice) {
+        case 'P':
+            game();
+            break;
+        case 'A':
+            gameAiP();
+            break;
+    }
     return 0;
 }
 

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "logic.c"
 #include "ia.c"
+#include <unistd.h>
 
 void printCLI(short **grid, short n){
     int count = 0;
@@ -30,12 +31,7 @@ void printCLI(short **grid, short n){
             printf("|\n");
             printf("   |_______|_______|_______|\n");
         }
-        for (int k = 0; k<3; k++) {
-            for (int j=0; j<3; j++) {
-            
-                printf("%d ;", grid[k][j]);
-            }
-        }
+        
         printf("\n");
         printf("\n------------------------------\n\n");
 }
@@ -69,9 +65,8 @@ void game(){
     while (win == 2 && nb_turn <= 9) {
         
         printCLI(grid, 3);
-        printf("Joueur %d: \ncolonne: A, B, C : ", turn);
+        printf("Joueur %d: \nCase: (A, B, C)(1, 2, 3) : ", turn);
         scanf(" %c", &col);
-        printf("ligne: 1, 2, 3 : ");
         scanf("%hd", &line);
         printf("\n\n");
 
@@ -137,28 +132,30 @@ void gameAiP(){
 
         // player's turn
         if (turn == 1) {
-            printf("Joueur %d: \ncolonne: A, B, C : ", turn);
+            printf("Joueur %d: \nCase: (A, B, C)(1, 2, 3) : ", turn);
             scanf(" %c", &col);
-            printf("ligne: 1, 2, 3 : ");
             scanf("%hd", &line);
         }else {
             bestMove(grid, 3, bestMoveSquare);
         }
         
         printf("\n\n");
-        if (grid[line-1][col-65] == 0 || grid[bestMoveSquare[0]][bestMoveSquare[1]] == 0){
-            if (turn == 2) {
-                grid[bestMoveSquare[0]][bestMoveSquare[1]] = turn;
-            }else {
-                grid[line-1][col-65] = turn;
-            }
+        if (grid[line-1][col-65] == 0){
+            grid[line-1][col-65] = turn;
             turn = turn == 1 ? 2 : 1;
             win = checkWin(grid, 3);
             nb_turn++;
-        }else {
+        }else if (grid[bestMoveSquare[0]][bestMoveSquare[1]] == 0) {
+            printf("L'Ordinateur réfléchi...\n\n");
+            sleep(1);
+            grid[bestMoveSquare[0]][bestMoveSquare[1]] = turn;
+            turn = turn == 1 ? 2 : 1;
+            win = checkWin(grid, 3);
+            nb_turn++;    
+        }
+        else {
             printf("Oups ! La case est déjà occupé, tu peux rejouer.\n");
         }
-
     }
 
     // decide un vainqueur lorsque le jeu est fini
