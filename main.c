@@ -25,7 +25,7 @@ int main(){
 
     printCLI(debug, 3);
 
-    game();
+    gameAiP();
     return 0;
 }
 

@@ -4,14 +4,12 @@
 
 int checkWinSquare(short **grid, short n, short square[2], short botPlayer){
     /* 
-       grid   : the board
-       n      : grid size (3)
-       square : [row, col] position to test
-       botPlayer : 1 for X, 2 for O (the AI’s symbol)
-
+       takes the current grid, its size, a square and the number of the bot
+       (either 1 or 2, usually 2 as the player is 1 lol) 
        Returns:
        2 -> playing here makes the bot win
        1 -> playing here blocks the opponent’s win
+       -1 -> already controlled square
        0 -> otherwise
        */
 
