@@ -12,10 +12,10 @@
 [💾 Installation](#-installation)   
 [📜 License](#-license)
 
+<br><br>
 ## ℹ️ About
 This a project made to learn the C programming language. 
 
-<br><br>
 ## ✨ Features
 - Tictactoe
 - Rock Paper Scissors
