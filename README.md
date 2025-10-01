@@ -1,6 +1,11 @@
 # English
+<br><br>
+<br><br>
 ---
+<br><br>
+<br><br>
 # CLI Games
+<br><br>
 
 ## 📑 Table of Contents
 [ℹ️ About](#-about)  
@@ -8,14 +13,17 @@
 [💾 Installation](#-installation)   
 [📜 License](#-license)
 
+<br><br>
 ## ℹ️ About
 This a project made to learn the C programming language. 
 
+<br><br>
 ## ✨ Features
 - Tictactoe
 - Rock Paper Scissors
 - Connect Four
 
+<br><br>
 ## 💾 Installation
 ### 1. Prerequisites
  - C99 or above
@@ -44,5 +52,6 @@ gcc main.c -o main  # the first key word should be YOUR compiler
 ./main
 ```
 
+<br><br>
 ## 📜 License
 This project is licensed under the MIT License — see the LICENSE file for details.
