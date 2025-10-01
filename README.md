@@ -1,8 +1,7 @@
 # English
-<br><br>
-<br><br>
+
 ---
-<br><br>
+
 <br><br>
 # CLI Games
 <br><br>
@@ -13,7 +12,6 @@
 [💾 Installation](#-installation)   
 [📜 License](#-license)
 
-<br><br>
 ## ℹ️ About
 This a project made to learn the C programming language. 
 
@@ -23,7 +21,6 @@ This a project made to learn the C programming language.
 - Rock Paper Scissors
 - Connect Four
 
-<br><br>
 ## 💾 Installation
 ### 1. Prerequisites
  - C99 or above
