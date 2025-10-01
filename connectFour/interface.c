@@ -7,6 +7,7 @@ void printGrid(int **grid, int n){
         
             printf("| %d ", *(*(grid+i)+j));
         }
+        printf("|\n");
     }
     printf("|___|___|___|___|___|___|___|\n");
 }
