@@ -11,3 +11,4 @@ void printGrid(int **grid, int n){
     }
     printf("|___|___|___|___|___|___|___|\n");
 }
+
