@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "interface.c"
+#include "logic.c"
 
 void printArr2d(int** arr, short n, short m){
     for (int i = 0; i<n; i++) {
@@ -23,6 +24,10 @@ int main(){
             *(*(grid+i)+j) = 0;
         }
     }
+    grid[0][1]= 1;
+    grid[0][2]= 1;
+    grid[0][3]= 1;
+    grid[0][4]= 1;
     printArr2d(grid, n, m);
     printGrid(grid, 8);
 }

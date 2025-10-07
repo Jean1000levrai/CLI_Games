@@ -22,14 +22,16 @@ int checkWin(int col, int row, int player, int **grid, short n){
 
     //check cols
     nbAligned = 0;
-    for (int i = row-3; i<row+3; i++) {
-        if (i<=0 && grid[i][col] == player) {
+    for (int i = col-3; i<col+3; i++) {
+        if (i<=0 && grid[row][i] == player) {
             nbAligned++;
         }
         if (nbAligned>=4){
             return 1;
         }
     }
+
+    
 
     return 0;
 }
