@@ -2,7 +2,7 @@
 
 
 void printGrid(int **grid, int n){
-    for (int i = 8; i>1; i--) {
+    for (int i = 7; i>-1; i--) {
         for (int j = 0; j<7; j++) {
         
             printf("| %d ", *(*(grid+i)+j));
