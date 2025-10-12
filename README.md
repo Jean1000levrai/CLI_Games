@@ -4,7 +4,7 @@
 
 
 # CLI Games
-<br><br>
+
 
 ## 📑 Table of Contents
 [ℹ️ About](#-about)  
@@ -12,7 +12,7 @@
 [💾 Installation](#-installation)   
 [📜 License](#-license)
 
-<br><br>
+
 ## ℹ️ About
 This a project made to learn the C programming language. 
 
@@ -24,7 +24,7 @@ This a project made to learn the C programming language.
 ## 💾 Installation
 ### 1. Prerequisites
  - C99 or above
- - A Compiler (e.g. gcc, glang, ...)
+ - A Compiler (e.g. gcc, clang, ...)
 
 ### 2. Download
 
