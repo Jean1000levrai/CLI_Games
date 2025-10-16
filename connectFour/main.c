@@ -30,5 +30,6 @@ int main(){
     grid[0][4]= 1;
     printArr2d(grid, n, m);
     printGrid(grid, 8);
-    printf("%d\n", checkWin(0, 2, 1, grid, 8, 7));
+    printf("%d\n", grid[0][2]);
+    printf("%d\n", checkWin(2, 0, 1, grid, 8, 7));
 }
