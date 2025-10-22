@@ -3,6 +3,9 @@
 main
 test
 test.c
+build/
+CMakeFiles/
+.cache/
 
 # cmake
 cmake_install.cmake
