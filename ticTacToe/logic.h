@@ -6,4 +6,4 @@
 
 int checkWin(short **grid, short n);
 
-#endif // CHECKWIN_H
+#endif

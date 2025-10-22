@@ -1,0 +1,3 @@
+/Users/jeansalomon/Documents/projects/CLIGames/connectFour/CMakeFiles/main.dir
+/Users/jeansalomon/Documents/projects/CLIGames/connectFour/CMakeFiles/edit_cache.dir
+/Users/jeansalomon/Documents/projects/CLIGames/connectFour/CMakeFiles/rebuild_cache.dir

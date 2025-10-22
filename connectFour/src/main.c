@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "interface.c"
-#include "logic.c"
+#include "interface.h"
+#include "logic.h"
 
 void printArr2d(int** arr, short n, short m){
     for (int i = 0; i<n; i++) {
@@ -31,5 +31,5 @@ int main(){
     printArr2d(grid, n, m);
     printGrid(grid, 8);
     printf("%d\n", grid[0][2]);
-    printf("%d\n", checkWin(2, 0, 1, grid, 8, 7));
+    printf("%d\n", checkWin(0, 2, 1, grid, 8, 7));
 }

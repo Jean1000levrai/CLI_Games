@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "interface.h"
 
 
 void printGrid(int **grid, int n){
