@@ -38,7 +38,7 @@ int checkWin(int row, int col, int player, int **grid, short n, short m) {
             int dr = directions[d][0];
             int dc = directions[d][1];
 
-            int count = 1; /* include the placed cell */
+            int count = 1; // include the placed cell
 
             /* step forward */
             for (int step = 1; step < 4; ++step) {
@@ -64,7 +64,7 @@ int checkWin(int row, int col, int player, int **grid, short n, short m) {
         }
     }
 
-    return 0; /* no win */
+    return 0; // no win 
 }
 
 int drop(int col, int player, int **grid, short n, short m) {
@@ -74,5 +74,5 @@ int drop(int col, int player, int **grid, short n, short m) {
             return row;
         }
     }
-    return -1; /* full column */
+    return -1; // full column 
 }
