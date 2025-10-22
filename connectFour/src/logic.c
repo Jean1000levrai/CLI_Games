@@ -66,3 +66,13 @@ int checkWin(int row, int col, int player, int **grid, short n, short m) {
 
     return 0; /* no win */
 }
+
+int drop(int col, int player, int **grid, short n, short m) {
+    for (int row = n - 1; row >= 0; --row) {
+        if (grid[row][col] == 0) {
+            grid[row][col] = player;
+            return row;
+        }
+    }
+    return -1; /* full column */
+}
