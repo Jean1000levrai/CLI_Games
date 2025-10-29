@@ -1,9 +1,8 @@
-# English
-
----
-
 
 # CLI Games
+
+[![Licence](https://hackatime-badge.hackclub.com/U0811ME6L0J/tests)](./LICENSE)
+[![Licence](https://hackatime-badge.hackclub.com/U0811ME6L0J/CLIGames)](./LICENSE) 
 <br><br>
 
 ## 📑 Table of Contents
