@@ -7,17 +7,24 @@
 #include "main.h"
 
 
-void printBoard(int** board, int l, int L) {
+void printBoard(char** boardStat, int** board, int L, int l) {
     for (int j = 0; j<L; j++) {
+
         for (int i = 0; i<l-1; i++) {
-        printf("%d - ", board[j][i]);
+            printf("%c - ", boardStat[j][i]);
         }
-    printf("%d\n", board[j][l-1]);
+        printf("%c   --->   ", boardStat[j][l-1]);
+
+        for (int i = 0; i<l-1; i++) {
+            printf("%d - ", board[j][i]);
+        }
+        printf("%d\n", board[j][l-1]);
     }
     printf("\n\n");
+    
 }
 
-void game(int** board, int L, int l) {
+void game(char** boardStat, int** board, int L, int l) {
 
     
     initRand();
@@ -28,8 +35,9 @@ void game(int** board, int L, int l) {
     
     while (running) {
     
-        printBoard(board, L, l);
+        printBoard(boardStat, board, L, l);
 
+        // guess
         char guess[6];
         printf("Make a guess: \"rygobm\":\n");
         scanf("%5s", guess);
@@ -38,6 +46,9 @@ void game(int** board, int L, int l) {
         printArr(score, 5);
         board[nbGuess] = malloc(5 * sizeof(int));
         memcpy(board[nbGuess], score, 5 * sizeof(int));
+        for (int i = 0; i<l; i++) {
+            boardStat[nbGuess][i] = guess[i];
+        }
         if (checkWin(score, 5)) {
             printf("You Win!\n");
             running = 0;

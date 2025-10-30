@@ -33,24 +33,20 @@ int main(){
     int** board = malloc(L * sizeof(boardRow));
 
     // board stats
-    int * boardStatRow = malloc(l * sizeof(int));
-    int** boardStat = malloc(L * sizeof(boardRow));
+    char * boardStatRow = malloc(l * sizeof(char));
+    char** boardStat = malloc(L * sizeof(boardStatRow));
 
     // fill board hints and stats
     for (int i = 0; i<l; i++) {
         boardRow[i] = 0;
-        boardStatRow[i] = 0;
+        boardStatRow[i] = '.';
     }
     for (int i = 0; i<L; i++) {
         board[i] = boardRow;
-        board[i] = boardStatRow;
+        boardStat[i] = boardStatRow;
     }
 
-
-    game(board, l, L);
-
+    game(boardStat, board, L, l);
     
-
-
     return 0;
 }

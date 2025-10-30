@@ -1,6 +1,6 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-void game(int** board, int L, int l);
+void game(char** boardStat, int** board, int l, int L);
 
 #endif
