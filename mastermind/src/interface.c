@@ -24,6 +24,17 @@ void printBoard(char** boardStat, int** board, int L, int l) {
     
 }
 
+void printArr2dstr(char** arr, int l, int L) {
+
+    for (int j = 0; j<L; j++) {
+        for (int i = 0; i<l-1; i++) {
+        printf("%c - ", arr[j][i]);
+        }
+    printf("%c\n", arr[j][l-1]);
+    }
+
+}
+
 void game(char** boardStat, int** board, int L, int l) {
 
     
@@ -46,9 +57,11 @@ void game(char** boardStat, int** board, int L, int l) {
         printArr(score, 5);
         board[nbGuess] = malloc(5 * sizeof(int));
         memcpy(board[nbGuess], score, 5 * sizeof(int));
+        printArr2dstr(boardStat, l, L);
         for (int i = 0; i<l; i++) {
             boardStat[nbGuess][i] = guess[i];
         }
+        printArr2dstr(boardStat, l, L);
         if (checkWin(score, 5)) {
             printf("You Win!\n");
             running = 0;
