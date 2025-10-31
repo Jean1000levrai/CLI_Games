@@ -6,6 +6,29 @@
 #include "interface.h"
 
 
+char* emoji_for(char c) {
+    // rygobm
+    switch (c) {
+        case 'r': return "🟥";
+        case 'y': return "🟨";
+        case 'g': return "🟩";
+        case 'o': return "🟧";
+        case 'b': return "🟦";
+        case 'm': return "🟪";
+        case '.': return "⬜";
+        default:  return "⬛";
+    }
+}
+
+char* emoji_for_int(int i) {
+    switch (i) {
+        case 0: return "⬜";
+        case 1: return "🟨";
+        case 2: return "🟩";
+        default: return "⬛";
+    }
+}
+
 void printBoard(char** boardStat, int** board, int L, int l) {
     for (int j = 0; j<L; j++) {
 
@@ -24,8 +47,29 @@ void printBoard(char** boardStat, int** board, int L, int l) {
         printf("\n");
     }
     printf("\n\n");
+}
+
+void printBoardColor(char** boardStat, int** board, int L, int l) {
+    for (int j = 0; j<L; j++) {
+
+        for (int i = 0; i<l-1; i++) {
+            printf("%s ", emoji_for(boardStat[j][i]));
+        }
+        printf("%s", emoji_for(boardStat[j][l-1]));
+        if (boardStat[j][l-1] != '.') {
+            printf("   --->   ");
+    
+            for (int i = 0; i<l-1; i++) {
+                printf("%s ", emoji_for_int(board[j][i]));
+            }
+            printf("%s", emoji_for_int(board[j][l-1]));
+        }
+        printf("\n");
+    }
+    printf("\n\n");
     
 }
+
 
 void printArr2dstr(char** arr, int l, int L) {
 
@@ -73,7 +117,8 @@ void game(char** boardStat, int** board, int L, int l) {
     
     while (running) {
     
-        printBoard(boardStat, board, L, l);
+        printf("\n\n");
+        printBoardColor(boardStat, board, L, l);
 
         // guess
         char guess[6];
@@ -97,7 +142,7 @@ void game(char** boardStat, int** board, int L, int l) {
     
             // update for a new loop
             free(score);
-            if (nbGuess > 11){
+            if (nbGuess > 10){
                 printf("You Loose!");
                 running = 0;
             }

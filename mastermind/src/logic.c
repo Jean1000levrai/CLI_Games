@@ -43,11 +43,6 @@ char* generateCode(int n) {
         }
         code[i] = color;
     }
-    for (int i = 0; i<n-1; i++) {
-        printf("%c - ", code[i]);
-    }
-    printf("%c\n", code[n-1]);
-
     return code;
 }
 
