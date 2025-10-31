@@ -24,29 +24,31 @@ void printArr2d(int** arr, int l, int L) {
 
 int main(){
 
-    // size of board
     int l = 5;
     int L = 12;
 
-    // board hints
-    int * boardRow = malloc(l * sizeof(int));
-    int** board = malloc(L * sizeof(boardRow));
+    // allocate row pointers
+    int **board = malloc(L * sizeof(int *));
+    char **boardStat = malloc(L * sizeof(char *));
 
-    // board stats
-    char * boardStatRow = malloc(l * sizeof(char));
-    char** boardStat = malloc(L * sizeof(boardStatRow));
-
-    // fill board hints and stats
-    for (int i = 0; i<l; i++) {
-        boardRow[i] = 0;
-        boardStatRow[i] = '.';
-    }
-    for (int i = 0; i<L; i++) {
-        board[i] = boardRow;
-        boardStat[i] = boardStatRow;
+    for (int i = 0; i < L; i++) {
+        board[i] = malloc(l * sizeof(int));
+        boardStat[i] = malloc(l * sizeof(char));
+        for (int j = 0; j < l; j++) {
+            board[i][j] = 0;
+            boardStat[i][j] = '.';
+        }
     }
 
     game(boardStat, board, L, l);
+
+    for (int i = 0; i < L; i++) {
+        free(board[i]);
+        free(boardStat[i]);
+    }
+    free(board);
+    free(boardStat);
+
     
     return 0;
 }

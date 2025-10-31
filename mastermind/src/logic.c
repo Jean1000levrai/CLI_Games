@@ -6,6 +6,7 @@
 
 
 char colors[6] = {'r', 'y', 'g', 'o', 'b', 'm'};
+int nColor = 6;
 
 
 void initRand(void) {
