@@ -42,7 +42,9 @@ cd ticTacToe    # for example
 
 ### 3. Compile
 ```
+mkdir -p build
 cd build/
+cmake ..
 make
 ```
 

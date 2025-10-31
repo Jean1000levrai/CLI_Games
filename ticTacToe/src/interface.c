@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "logic.c"
-#include "ia.c"
 #include <unistd.h>
+
+#include "interface.h"
+#include "logic.h"
+#include "ia.h"
 
 void printCLI(short **grid, short n){
     int count = 0;

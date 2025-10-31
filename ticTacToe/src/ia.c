@@ -1,5 +1,8 @@
-#include "logic.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+#include "ia.h"
+#include "logic.h"
 
 
 int checkWinSquare(short **grid, short n, short square[2], short botPlayer){
