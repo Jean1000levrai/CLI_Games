@@ -12,20 +12,22 @@ void printBoard(char** boardStat, int** board, int L, int l) {
         for (int i = 0; i<l-1; i++) {
             printf("%c - ", boardStat[j][i]);
         }
-        printf("%c   --->   ", boardStat[j][l-1]);
-
-        for (int i = 0; i<l-1; i++) {
-            printf("%d - ", board[j][i]);
+        printf("%c", boardStat[j][l-1]);
+        if (boardStat[j][l-1] != '.') {
+            printf("   --->   ");
+    
+            for (int i = 0; i<l-1; i++) {
+                printf("%d - ", board[j][i]);
+            }
+            printf("%d", board[j][l-1]);
         }
-        printf("%d\n", board[j][l-1]);
+        printf("\n");
     }
     printf("\n\n");
     
 }
 
 void printArr2dstr(char** arr, int l, int L) {
-
-    arr[2][3] = 'A';
 
     for (int j = 0; j<L; j++) {
         for (int i = 0; i<l-1; i++) {
@@ -37,6 +39,10 @@ void printArr2dstr(char** arr, int l, int L) {
 }
 
 int isGuessValid(char* guess, int nGuess) {
+    /*
+    returns 1 if the guess is valid
+    returns 0 otherwise
+    */
     int i = 0;
     int pass = 0;
     while (guess[i] != '\0') {
@@ -44,6 +50,9 @@ int isGuessValid(char* guess, int nGuess) {
             if (guess[i] == colors[j]){
                 pass = 1;
             }
+        }
+        if (isInCode(guess[i], guess, i)) {
+            pass = 0;
         }
         if (pass == 0) {
             return 0;
@@ -71,7 +80,9 @@ void game(char** boardStat, int** board, int L, int l) {
         printf("Make a guess: \"rygobm\":\n");
         scanf("%5s", guess);
 
-        if (isGuessValid(guess, 5)) {       
+        // valid guess
+        if (isGuessValid(guess, 5)) {    
+
             // board & score
             int* score = checkCombi(guess, code, 5);
             board[nbGuess] = malloc(5 * sizeof(int));
@@ -91,9 +102,11 @@ void game(char** boardStat, int** board, int L, int l) {
                 running = 0;
             }
             nbGuess++;
-        } else {
+        }
+        // invalid guess
+        else {
             printf("Invalid guess!\n");
         }
-
     }
+    free(code);
 }

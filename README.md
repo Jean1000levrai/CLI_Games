@@ -19,11 +19,13 @@ This a project made to learn the C programming language.
 - Tictactoe
 - Rock Paper Scissors
 - Connect Four
+- Mastermind
 
 ## 💾 Installation
 ### 1. Prerequisites
  - C99 or above
- - A Compiler (e.g. gcc, glang, ...)
+ - A Compiler (e.g. gcc, clang, ...)
+ - CMake >= 3.16
 
 ### 2. Download
 
@@ -40,7 +42,8 @@ cd ticTacToe    # for example
 
 ### 3. Compile
 ```
-gcc main.c -o main  # the first key word should be YOUR compiler
+cd build/
+make
 ```
 
 ### 4. Play on the command line interface!

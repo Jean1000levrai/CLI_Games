@@ -3,7 +3,7 @@ project(mastermind C)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(mastermind 
+add_executable(main 
     src/main.c src/logic.c src/interface.c)
 
-target_include_directories(mastermind PRIVATE include)
+target_include_directories(main PRIVATE include)

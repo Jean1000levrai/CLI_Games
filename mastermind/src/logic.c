@@ -19,10 +19,29 @@ char chooseColor(char* color, int n) {
     return color[random];
 }
 
+int isInCode(char color, char* code, int n){
+    /*
+    takes guess[i] in parameter
+    returns 1 if the guess is in the code
+    returns 0 otherwise
+    */
+    for (int i = 0; i<n; i++) {
+        if (color == code[i])
+            return 1;
+    }
+    return 0;
+}
+
 char* generateCode(int n) {
     char* code = malloc(n * sizeof(char));
+    char color;
     for (int i = 0; i<n; i++) {
-        code[i] = chooseColor(colors, 6);
+        color = chooseColor(colors, 6);
+        if (isInCode(color, code, i)) {
+            i--;
+            continue;
+        }
+        code[i] = color;
     }
     for (int i = 0; i<n-1; i++) {
         printf("%c - ", code[i]);
@@ -30,19 +49,6 @@ char* generateCode(int n) {
     printf("%c\n", code[n-1]);
 
     return code;
-}
-
-int isIn(char guess, char* code, int n) {
-    /*
-    takes guess[i] in parameter
-    returns 1 if the guess is in the code
-    returns 0 otherwise
-    */
-    for (int i = 0; i<n; i++) {
-        if (guess == code[i])
-            return 1;
-    }
-    return 0;
 }
 
 int correct(char* guess, char* code, int i) {
@@ -61,7 +67,7 @@ int* checkCombi(char* guess, char* code, int n) {
         if (correct(guess, code, i)){
             score[i] = 2;
         }
-        else if (isIn(guess[i], code, n)){
+        else if (isInCode(guess[i], code, n)){
             score[i] = 1;
         }
         else {
