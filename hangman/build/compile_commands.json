@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/main.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/main.c",
+  "output": "CMakeFiles/main.dir/src/main.c.o"
+},
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/logic.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/logic.c",
+  "output": "CMakeFiles/main.dir/src/logic.c.o"
+},
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/interface.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/interface.c",
+  "output": "CMakeFiles/main.dir/src/interface.c.o"
+}
+]

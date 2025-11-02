@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/include  -arch arm64 -o CMakeFiles/main.dir/src/ia.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/ia.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/ia.c",
+  "output": "CMakeFiles/main.dir/src/ia.c.o"
+},
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/include  -arch arm64 -o CMakeFiles/main.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/interface.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/interface.c",
+  "output": "CMakeFiles/main.dir/src/interface.c.o"
+},
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/include  -arch arm64 -o CMakeFiles/main.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/logic.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/logic.c",
+  "output": "CMakeFiles/main.dir/src/logic.c.o"
+},
+{
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/include  -arch arm64 -o CMakeFiles/main.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/main.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/ticTacToe/src/main.c",
+  "output": "CMakeFiles/main.dir/src/main.c.o"
+}
+]
