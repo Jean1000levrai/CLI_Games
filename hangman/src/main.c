@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
 
-#include "logic.h"
+// #include "logic.h"
 #include "interface.h"
 
-int main() {
+// int main() {
     
-    game();
+//     for (int i ; i<8; i++) {
+//         // fflush(stdout);
+//         // sleep(1);
+//         printHangman(i);
+//     }
+//     // game();
 
-    return 0;
-}
+//     return 0;
+// }

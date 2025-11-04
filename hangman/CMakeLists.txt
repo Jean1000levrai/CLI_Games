@@ -6,9 +6,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add your source files
 add_executable(main
+    src/interface.c
     src/main.c
     src/logic.c
-    src/interface.c
 )
 
 target_include_directories(main PRIVATE include)
