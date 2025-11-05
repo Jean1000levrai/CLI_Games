@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/hangman.o: src/hangman.c.o
+.PHONY : src/hangman.o
+
+# target to build an object file
+src/hangman.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/hangman.c.o
+.PHONY : src/hangman.c.o
+
+src/hangman.i: src/hangman.c.i
+.PHONY : src/hangman.i
+
+# target to preprocess a source file
+src/hangman.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/hangman.c.i
+.PHONY : src/hangman.c.i
+
+src/hangman.s: src/hangman.c.s
+.PHONY : src/hangman.s
+
+# target to generate assembly for a file
+src/hangman.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/hangman.c.s
+.PHONY : src/hangman.c.s
+
 src/interface.o: src/interface.c.o
 .PHONY : src/interface.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/hangman.o"
+	@echo "... src/hangman.i"
+	@echo "... src/hangman.s"
 	@echo "... src/interface.o"
 	@echo "... src/interface.i"
 	@echo "... src/interface.s"

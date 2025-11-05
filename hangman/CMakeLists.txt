@@ -9,6 +9,7 @@ add_executable(main
     src/interface.c
     src/main.c
     src/logic.c
+    src/hangman.c
 )
 
 target_include_directories(main PRIVATE include)
