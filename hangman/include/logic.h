@@ -3,5 +3,7 @@
 
 void checkWin();
 void readWord();
+char* choseWord();
+int isInCode(char letter, char* code, int n);
 
 #endif

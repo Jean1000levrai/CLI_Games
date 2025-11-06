@@ -16,6 +16,19 @@ void checkWin(){
 
 }
 
+int isInCode(char letter, char* code, int n) {
+    /*param: letter, code: the secret word, n is the size of the code
+    returns 1 if letter is in code
+    returns 0 if it is not
+    */
+    for (int i = 0; i < n; i++) {
+        if (letter == code[i]) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 int nbWordCounter(char* word){
     char ch;
     int i = 0;
@@ -32,7 +45,6 @@ int nbWordCounter(char* word){
     }
     return i;    
 }
-
 
 char* choseWord(){
     // 38 is nb of letters of the longest word in french (according to ddg ai)
@@ -64,6 +76,7 @@ char* choseWord(){
     // fill the word
     while ((ch = fgetc(fptr)) != '\n') {
         word[i] = ch;
+        i++;
     }
 
     return word;

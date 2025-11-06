@@ -3,7 +3,6 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "logic.h"
 #include "interface.h"
 
 int main() {
@@ -14,9 +13,8 @@ int main() {
     //     sleep(1);
     //     printHangman(i);
     // }
-    int n = 323565;
-    printf("%d\n", n);
-    // readWord();
+
     game();
+    
     return 0;
 }
