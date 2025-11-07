@@ -41,11 +41,11 @@ void game(){
         guess = playerInput();
 
         // valid guess
-        if (isInCode(guess, secretWord, strlen(secretWord))) {
-        }
-        else {
-            nbGuess++;
-        }
+        // if (isInCode(guess, secretWord, strlen(secretWord))) {
+        // }
+        // else {
+        //     nbGuess++;
+        // }
     }
 
     printf("%s\n", secretWord);
