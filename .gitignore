@@ -4,11 +4,16 @@ main
 test
 test.c
 .cache/
+.DS_Store
+
+# build
+release/
 
 # cmake
 CMakeFiles/
 cmake_install.cmake
 CMakeCache.txt
+Makefile
 
 # Prerequisites
 *.d

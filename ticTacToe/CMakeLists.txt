@@ -5,6 +5,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 file(GLOB SRC_FILES src/*.c)
-add_executable(main ${SRC_FILES})
+add_executable(ticTacToe ${SRC_FILES})
 
-target_include_directories(main PRIVATE include)
+target_include_directories(ticTacToe PRIVATE include)

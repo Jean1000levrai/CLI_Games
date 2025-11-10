@@ -1,20 +1,20 @@
 [
 {
   "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/main.c",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/main.c",
   "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/main.c",
-  "output": "CMakeFiles/main.dir/src/main.c.o"
+  "output": "CMakeFiles/connectFour.dir/src/main.c.o"
 },
 {
   "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/logic.c",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/logic.c",
   "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/logic.c",
-  "output": "CMakeFiles/main.dir/src/logic.c.o"
+  "output": "CMakeFiles/connectFour.dir/src/logic.c.o"
 },
 {
   "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/interface.c",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/interface.c",
   "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/interface.c",
-  "output": "CMakeFiles/main.dir/src/interface.c.o"
+  "output": "CMakeFiles/connectFour.dir/src/interface.c.o"
 }
 ]
