@@ -32,7 +32,7 @@ This a project made to learn the C programming language.
 #### In the desired folder:
 
 ```
-git clone git@github.com:Jean1000levrai/CLI_Games.git
+git clone https://github.com/Jean1000levrai/CLI_Games.git
 cd CLI_Games
 ```
 #### Browse to the game of your choice
