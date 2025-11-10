@@ -3,15 +3,17 @@
 
 [![Licence](https://hackatime-badge.hackclub.com/U0811ME6L0J/tests)](./LICENSE)
 [![Licence](https://hackatime-badge.hackclub.com/U0811ME6L0J/CLIGames)](./LICENSE) 
-<br><br>
+
+![preview](ressources/screenshot1.png)
+
 
 ## 📑 Table of Contents
 [ℹ️ About](#-about)  
 [✨ Features](#-features)  
 [💾 Installation](#-installation)   
-[📜 License](#-license)
+[📜 License](#-license)    
+   
 
-<br><br>
 ## ℹ️ About
 This a project made to learn the C programming language. 
 
