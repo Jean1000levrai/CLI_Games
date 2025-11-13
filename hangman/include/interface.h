@@ -2,8 +2,8 @@
 #define INTERFACE_H
 
 
-char* guessedLetter = "";
-int nbLetter = 0;
+extern char* guessedLetter;
+extern int nbLetter;
 
 void game();
 void printHangman(int i);

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #include "logic.h"
 
@@ -46,7 +47,7 @@ int nbWordCounter(char* word){
     return i;    
 }
 
-char* choseWord(){
+char* choseWord(){ 
     // 38 is nb of letters of the longest word in french (according to ddg ai)
     char* word = malloc(38 * sizeof(char));
 
@@ -80,4 +81,15 @@ char* choseWord(){
     }
 
     return word;
+}
+
+void printWord(char* word, char* guessedLetter){
+    for (int i = 0; i<strlen(word); i++) {
+        if (isInCode(word[i], guessedLetter, strlen(guessedLetter))) {
+            printf("%c ", word[i]);
+        }
+        else {
+            printf("_ ");
+        }
+    }
 }

@@ -6,6 +6,9 @@
 #include "interface.h"
 #include "hangman.h"
 
+char* guessedLetter = "";
+int nbLetter = 0;
+
 
 char playerInput(){
 
@@ -19,15 +22,12 @@ void printHangman(int i){
     printf("%s", HANGMANPICS[i]);
 }
 
-void printWord(char* word){
-    printf("%s\n", word);
-}
-
 void game(){
 
     // init game
     int running = 1;
     char* secretWord = choseWord();
+    char* urGuessedWord = malloc(strlen(secretWord) * sizeof(char));
     char guess;
     int nbGuess = 0;
 
@@ -36,16 +36,25 @@ void game(){
     
         // print hangman
         printHangman(nbGuess);
+        printf("\n");
+        printf("the word is: ");
+        printWord(secretWord, guessedLetter);
+
+        // print word
+        // void printWord(char* word, char* guessedLetter);
 
         // guess
+        printf("Guess a letter: ");
         guess = playerInput();
 
         // valid guess
-        // if (isInCode(guess, secretWord, strlen(secretWord))) {
-        // }
-        // else {
-        //     nbGuess++;
-        // }
+        if (isInCode(guess, secretWord, strlen(secretWord))) {
+            guessedLetter[nbLetter] = guess;
+            
+        }
+        else {
+            nbGuess++;
+        }
     }
 
     printf("%s\n", secretWord);
