@@ -1,26 +1,26 @@
 [
 {
-  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/interface.c",
-  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/interface.c",
+  "directory": "/home/jean/Documents/projects/cli_games/hangman/build",
+  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/hangman/include -std=gnu11 -o CMakeFiles/main.dir/src/interface.c.o -c /home/jean/Documents/projects/cli_games/hangman/src/interface.c",
+  "file": "/home/jean/Documents/projects/cli_games/hangman/src/interface.c",
   "output": "CMakeFiles/main.dir/src/interface.c.o"
 },
 {
-  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/main.c",
-  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/main.c",
+  "directory": "/home/jean/Documents/projects/cli_games/hangman/build",
+  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/hangman/include -std=gnu11 -o CMakeFiles/main.dir/src/main.c.o -c /home/jean/Documents/projects/cli_games/hangman/src/main.c",
+  "file": "/home/jean/Documents/projects/cli_games/hangman/src/main.c",
   "output": "CMakeFiles/main.dir/src/main.c.o"
 },
 {
-  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/logic.c",
-  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/logic.c",
+  "directory": "/home/jean/Documents/projects/cli_games/hangman/build",
+  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/hangman/include -std=gnu11 -o CMakeFiles/main.dir/src/logic.c.o -c /home/jean/Documents/projects/cli_games/hangman/src/logic.c",
+  "file": "/home/jean/Documents/projects/cli_games/hangman/src/logic.c",
   "output": "CMakeFiles/main.dir/src/logic.c.o"
 },
 {
-  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/build",
-  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/hangman/include -std=gnu11 -arch arm64 -o CMakeFiles/main.dir/src/hangman.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/hangman/src/hangman.c",
-  "file": "/Users/jeansalomon/Documents/projects/CLIGames/hangman/src/hangman.c",
+  "directory": "/home/jean/Documents/projects/cli_games/hangman/build",
+  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/hangman/include -std=gnu11 -o CMakeFiles/main.dir/src/hangman.c.o -c /home/jean/Documents/projects/cli_games/hangman/src/hangman.c",
+  "file": "/home/jean/Documents/projects/cli_games/hangman/src/hangman.c",
   "output": "CMakeFiles/main.dir/src/hangman.c.o"
 }
 ]
