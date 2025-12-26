@@ -1,7 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-void printGrid(int **grid, int n, int m);
+
 void game();
 
 #endif

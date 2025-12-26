@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "interface.h"
 
 void printArr2d(int** arr, short n, short m){

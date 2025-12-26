@@ -3,63 +3,86 @@
 #include "interface.h"
 #include "logic.h"
 
+static void printGrid(int **grid, int n, int m) {
+    /* column numbers */
+    for (int j = 1; j <= m; j++)
+        printf("| %d ", j);
+    printf("|\n");
 
-void printGrid(int **grid, int n, int m){
-    printf("| 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n");
-    printf("|---|---|---|---|---|---|---|\n");
+    for (int j = 0; j < m; j++)
+        printf("|---");
+    printf("|\n");
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (grid[i][j] == 0)
-                printf("|   ");
-            else if (grid[i][j] == 1)
-                printf("| x ");
-            else if (grid[i][j] == 2)
-                printf("| o ");
-            else
-                printf("| ? ");
+            char ch = ' ';
+            if (grid[i][j] == 1) ch = 'x';
+            else if (grid[i][j] == 2) ch = 'o';
+            printf("| %c ", ch);
         }
         printf("|\n");
     }
-    printf("|___|___|___|___|___|___|___|\n\n");
+
+    for (int j = 0; j < m; j++)
+        printf("|___");
+    printf("|\n\n");
 }
 
-void game() {
-    int n = 8, m = 7;
-    int **grid = malloc(n * sizeof(int *));
+void game(void) {
+    const int n = 6;   /* rows */
+    const int m = 7;   /* columns */
+
+    int **grid = malloc(n * sizeof *grid);
+    if (!grid) return;
+
     for (int i = 0; i < n; i++) {
-        grid[i] = malloc(m * sizeof(int));
-        for (int j = 0; j < m; j++) grid[i][j] = 0;
+        grid[i] = malloc(m * sizeof *grid[i]);
+        if (!grid[i]) goto cleanup;
+        for (int j = 0; j < m; j++)
+            grid[i][j] = 0;
     }
 
     int win = 0;
     int turn = 0;
-    int col, row;
 
-    while (win == 0 && turn < n * m) {
+    while (!win && turn < n * m) {
+        int col, row;
+        int player = (turn % 2) + 1;
+
         printGrid(grid, n, m);
-        printf("Player %d — Choose column (1–%d): ", (turn % 2) + 1, m);
+        printf("Player %d — Choose column (1–%d): ", player, m);
+
         if (scanf("%d", &col) != 1 || col < 1 || col > m) {
             printf("Invalid input. Try again.\n");
-            while (getchar() != '\n'); // clear stdin
+            int ch;
+            while ((ch = getchar()) != '\n' && ch != EOF);
             continue;
         }
 
-        row = drop(col - 1, (turn % 2) + 1, grid, n, m);
+        row = drop(col - 1, player, grid, n, m);
         if (row == -1) {
             printf("Column full. Choose another.\n");
             continue;
         }
 
-        win = checkWin(row, col - 1, (turn % 2) + 1, grid, n, m);
+        win = checkWin(row, col - 1, player, grid, n, m);
+        if (win == -1) {
+            printf("Internal error.\n");
+            break;
+        }
+
         turn++;
     }
 
     printGrid(grid, n, m);
-    if (win == 1)
+
+    if (win)
         printf("Player %d wins!\n", ((turn - 1) % 2) + 1);
     else if (turn == n * m)
         printf("Draw! No more moves.\n");
 
-    for (int i = 0; i < n; i++) free(grid[i]);
+cleanup:
+    for (int i = 0; i < n; i++)
+        free(grid[i]);
     free(grid);
 }
