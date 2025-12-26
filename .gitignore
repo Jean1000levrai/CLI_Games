@@ -9,6 +9,11 @@ test.c
 # build
 release/
 connectFour
+hangman
+mastermind
+RockPaperScissors
+ticTacToe
+dist/
 
 # cmake
 CMakeFiles/

@@ -1,9 +1,10 @@
 
 # CLI Games  
-    
-https://github.com/Jean1000levrai/CLI_Games   
-   
-![preview](ressources/screenshot1.png)
+     
+![preview](ressources/screenshot1.png)    
+
+## Author
+[Jean1000](https://github.com/Jean1000levrai/CLI_Games)    
 
 
 ## 📑 Table of Contents
@@ -21,37 +22,58 @@ This a project made to learn the C programming language.
 - Rock Paper Scissors
 - Connect Four
 - Mastermind   
+- Hangman
 
 ## 💾 Installation
 ### 1. Prerequisites
- - C99 or above
- - A Compiler (e.g. gcc, clang, ...)
+ - C11 or above
+ - A Compiler (e.g. gcc, clang)
  - CMake >= 3.16     
 
 ### 2. Download
 
 #### In the desired folder:
 
-```
+```bash
 git clone https://github.com/Jean1000levrai/CLI_Games.git
 cd CLI_Games
 ```
-#### Browse to the game of your choice
+
+## Install via installation script
+
+### 3. install
+```bash
+chmod +x install.sh
+./install.sh
 ```
+
+### Play on the command line interface!
+
+```bash
+./app.sh
+```
+
+## Compile manually
+
+### 3. 
+#### Browse to the game of your choice
+```bash
 cd ticTacToe    # for example
 ```
 
-### 3. Compile
-```
+### 4. Compile
+```bash
 mkdir -p build
 cd build/
 cmake ..
 make
 ```
 
-### 4. Play on the command line interface!
-```
-./main
+### 5. Play on the command line interface!
+In the `build`folder.   
+You can find the game's name with `ls`, then looking for the binary file.   
+```bash
+./<name_of_game>
 ```
 
 <br><br>
