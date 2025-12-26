@@ -5,23 +5,22 @@
 
 #include "logic.h"
 
-// already counted
-// defined because its known
-// optimisation
-// count it again if you change words.txt
 int nbWord = 323500;
 
+int checkWin(const char *word, const char *guessedLetter) {
+    int wordLen = strlen(word);
+    int guessedLen = strlen(guessedLetter);
 
-void checkWin(){
-
-
+    for (int i = 0; i < wordLen; i++) {
+        if (!isInCode(word[i], (char *)guessedLetter, guessedLen)) {
+            return 0; // at least one letter not guessed
+        }
+    }
+    return 1; // all letters guessed
 }
 
+
 int isInCode(char letter, char* code, int n) {
-    /*param: letter, code: the secret word, n is the size of the code
-    returns 1 if letter is in code
-    returns 0 if it is not
-    */
     for (int i = 0; i < n; i++) {
         if (letter == code[i]) {
             return 1;
@@ -30,65 +29,45 @@ int isInCode(char letter, char* code, int n) {
     return 0;
 }
 
-int nbWordCounter(char* word){
-    char ch;
-    int i = 0;
-    FILE *fptr = fopen("../assets/words.txt", "r");
-    if(fptr == NULL){
-        printf("Error opening file");
-        exit(1);
-    }
-    while ((ch = fgetc(fptr)) != EOF){
-
-        if (ch == '\n') {
-            i++;
-        }
-    }
-    return i;    
-}
-
 char* choseWord(){ 
-    // 38 is nb of letters of the longest word in french (according to ddg ai)
-    char* word = malloc(38 * sizeof(char));
-
-    // open file n stuff
     FILE *fptr = fopen("../assets/words.txt", "r");
-    if(fptr == NULL){
-        printf("Error opening file");
+    if (fptr == NULL) {
+        perror("Error opening file");
         exit(1);
     }
-    int i = 0;
-    char ch;
+
+    char* word = malloc(64);   // enough for longest word
+    if (!word) {
+        exit(1);
+    }
+
     srand(time(NULL));
     int wordIndex = rand() % nbWord;
+    int current = 0;
+    char buffer[64];
 
-    // go to the word right before the one
-    while (wordIndex > 0) {
-
-        wordIndex--;
-        ch = fgetc(fptr);   
+    while (fgets(buffer, sizeof(buffer), fptr)) {
+        if (current == wordIndex) {
+            buffer[strcspn(buffer, "\r\n")] = '\0';  // remove newline
+            strcpy(word, buffer);
+            break;
+        }
+        current++;
     }
 
-    // finish the already started word
-    while ((ch = fgetc(fptr)) != '\n') {
-        continue;
-    }
-
-    // fill the word
-    while ((ch = fgetc(fptr)) != '\n') {
-        word[i] = ch;
-        i++;
-    }
-
+    fclose(fptr);
     return word;
 }
 
-void printWord(char* word, char* guessedLetter){
-    for (int i = 0; i<strlen(word); i++) {
-        if (isInCode(word[i], guessedLetter, strlen(guessedLetter))) {
+
+void printWord(char* word, char* guessedLetter) {
+    int wordLen = strlen(word);
+    int guessLen = strlen(guessedLetter);
+
+    for (int i = 0; i < wordLen; i++) {
+        if (isInCode(word[i], guessedLetter, guessLen)) {
             printf("%c ", word[i]);
-        }
-        else {
+        } else {
             printf("_ ");
         }
     }

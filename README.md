@@ -1,8 +1,8 @@
 
-# CLI Games
-
-[![Licence](https://hackatime-badge.hackclub.com/U0811ME6L0J/CLIGames)](./LICENSE) 
-
+# CLI Games  
+    
+https://github.com/Jean1000levrai/CLI_Games   
+   
 ![preview](ressources/screenshot1.png)
 
 
@@ -14,19 +14,19 @@
    
 
 ## ℹ️ About
-This a project made to learn the C programming language. 
+This a project made to learn the C programming language.   
 
 ## ✨ Features
 - Tictactoe
 - Rock Paper Scissors
 - Connect Four
-- Mastermind
+- Mastermind   
 
 ## 💾 Installation
 ### 1. Prerequisites
  - C99 or above
  - A Compiler (e.g. gcc, clang, ...)
- - CMake >= 3.16
+ - CMake >= 3.16     
 
 ### 2. Download
 

@@ -1,8 +1,10 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
+#define MAX_GUESSED 26
 
-extern char* guessedLetter;
+
+char guessedLetter[MAX_GUESSED];
 extern int nbLetter;
 
 void game();

@@ -1,7 +1,7 @@
 #ifndef LOGIC_H
 #define LOGIC_H
 
-void checkWin();
+int checkWin(const char *word, const char *guessedLetter);
 void readWord();
 char* choseWord();
 int isInCode(char letter, char* code, int n);

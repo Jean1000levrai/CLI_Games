@@ -1,20 +1,20 @@
 [
 {
-  "directory": "/home/jean/Documents/projects/cli_games/connectFour/build",
-  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/connectFour/include -std=gnu11 -o CMakeFiles/connectFour.dir/src/main.c.o -c /home/jean/Documents/projects/cli_games/connectFour/src/main.c",
-  "file": "/home/jean/Documents/projects/cli_games/connectFour/src/main.c",
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/main.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/main.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/main.c",
   "output": "CMakeFiles/connectFour.dir/src/main.c.o"
 },
 {
-  "directory": "/home/jean/Documents/projects/cli_games/connectFour/build",
-  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/connectFour/include -std=gnu11 -o CMakeFiles/connectFour.dir/src/logic.c.o -c /home/jean/Documents/projects/cli_games/connectFour/src/logic.c",
-  "file": "/home/jean/Documents/projects/cli_games/connectFour/src/logic.c",
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/logic.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/logic.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/logic.c",
   "output": "CMakeFiles/connectFour.dir/src/logic.c.o"
 },
 {
-  "directory": "/home/jean/Documents/projects/cli_games/connectFour/build",
-  "command": "/usr/bin/cc  -I/home/jean/Documents/projects/cli_games/connectFour/include -std=gnu11 -o CMakeFiles/connectFour.dir/src/interface.c.o -c /home/jean/Documents/projects/cli_games/connectFour/src/interface.c",
-  "file": "/home/jean/Documents/projects/cli_games/connectFour/src/interface.c",
+  "directory": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/build",
+  "command": "/usr/bin/cc  -I/Users/jeansalomon/Documents/projects/CLIGames/connectFour/include -std=gnu11 -arch arm64 -o CMakeFiles/connectFour.dir/src/interface.c.o -c /Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/interface.c",
+  "file": "/Users/jeansalomon/Documents/projects/CLIGames/connectFour/src/interface.c",
   "output": "CMakeFiles/connectFour.dir/src/interface.c.o"
 }
 ]
